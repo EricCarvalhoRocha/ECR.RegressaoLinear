@@ -42,3 +42,13 @@ plt.show()
 print(modelo.predict([[2017]]))
 print(modelo.coef_)
 print(modelo.intercept_)
+
+#calculando o erro quadratico
+y_pred = modelo.predict(x_test)
+def soma_dos_erros_quadraticos():
+    erro = y_test - y_pred
+    return sum(erro)**2
+
+soma_dos_erros_quadraticos()    
+
+
